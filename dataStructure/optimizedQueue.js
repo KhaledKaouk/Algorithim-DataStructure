@@ -1,31 +1,38 @@
 class optimizedQueue {
-  queuekData = [];
+  queueData = {};
   rear = 0;
   front = 0;
   constructor(data) {
-    if (data) data.forEach((element) => this.queuekData.push(element));
+    if (data) data.forEach((element) => this.queueData.push(element));
   }
 
   enQueue(element) {
-    this.queuekData[this.rear] = element;
+    this.queueData[this.rear] = element;
     this.rear++;
   }
   deQueue() {
-    this.queuekData.pop();
+    delete this.queueData[this.front];
+    this.front++;
   }
   peek() {
-    return this.queuekData[this.queuekData.length - 1];
+    return this.queueData[this.front];
   }
 
   isEmpty() {
-    return this.queuekData.length === 0;
+    return this.front === this.rear;
   }
   size() {
-    return this.queuekData.length;
+    return this.rear - this.front;
   }
   print() {
-    this.queuekData.forEach((element) => {
-      console.log(element);
-    });
+    console.log(this.queueData);
   }
 }
+
+let orders = new optimizedQueue();
+orders.enQueue("meat");
+orders.enQueue("desert");
+orders.deQueue();
+console.log(orders.peek());
+orders.enQueue("tea");
+orders.print();
