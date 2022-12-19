@@ -32,7 +32,7 @@ class optimizedQueue {
 let orders = new optimizedQueue();
 orders.enQueue("meat");
 orders.enQueue("desert");
-orders.deQueue();
-console.log(orders.peek());
 orders.enQueue("tea");
+orders.deQueue();
+orders.enQueue("coffee");
 orders.print();
