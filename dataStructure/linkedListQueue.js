@@ -25,14 +25,16 @@ class Queue {
   }
 }
 
-const newQueue = new Queue();
-console.log(newQueue.isEmpty());
+// const newQueue = new Queue();
+// console.log(newQueue.isEmpty());
 
-newQueue.enqueue(10);
-newQueue.enqueue(20);
-newQueue.enqueue(30);
-console.log(newQueue.getSize());
-newQueue.print();
-console.log(newQueue.dequeue());
-newQueue.print();
-console.log(newQueue.peek());
+// newQueue.enqueue(10);
+// newQueue.enqueue(20);
+// newQueue.enqueue(30);
+// console.log(newQueue.getSize());
+// newQueue.print();
+// console.log(newQueue.dequeue());
+// newQueue.print();
+// console.log(newQueue.peek());
+
+module.exports = Queue
